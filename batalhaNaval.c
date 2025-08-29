@@ -2,39 +2,51 @@
 
 /*
 
-Nome: Ademir de Assis Honorato Gonçalves Junior  Curso: Engenharia de Software  Atividade: Desafio Batalha Naval Nivel Novato
+Nome: Ademir de Assis Honorato Gonçalves Junior  Curso: Engenharia de Software  Atividade: Desafio Batalha Naval Nivel Intermediario
 
 O que você vai fazer
 
-Represente o Tabuleiro: Utilize uma matriz (array bidimensional) para representar o tabuleiro do Batalha Naval. Neste nível novato, o tabuleiro terá um tamanho fixo 10x10. Inicialize todas as posições do tabuleiro com o valor 0, representando água.
- 
-Posicione os Navios: Declare e inicialize dois vetores (arrays unidimensionais) para representar os navios. Cada navio ocupará um número fixo de posições no tabuleiro (defina esse tamanho, por exemplo, 3 posições). Um navio será posicionado horizontalmente e o outro verticalmente. Represente as posições ocupadas pelos navios na matriz do tabuleiro com o valor 3. Você deverá escolher as coordenadas iniciais de cada navio e garantir que eles estejam completamente dentro dos limites do tabuleiro e não se sobreponham. 
-Dica: O posicionamento do navio pode ser feito copiando o valor 3 de cada posição do vetor do navio para as posições correspondentes na matriz do tabuleiro, de acordo com a orientação (horizontal ou vertical) do navio.
- 
-Exiba o Tabuleiro: Utilize loops aninhados e o comando printf para exibir o tabuleiro no console. Mostre a matriz completa, com 0s representando água e 3s representando as partes dos navios. A saída deve ser clara e organizada, permitindo visualizar facilmente a posição dos navios. 
-Dica: Imprima um espaço ou outro caractere separador entre os elementos da matriz para facilitar a visualização.
+Você deve modificar o seu programa em C para:
 
-"Fiz exatamente oque o professor fez na explicação da atividade"
+Criar um Tabuleiro 10x10: Declare uma matriz (array bidimensional) de tamanho 10x10 para representar o tabuleiro do Batalha Naval.
+Inicialize todas as posições com o valor 0, representando água.
+ 
+Posicionar Quatro Navios: Posicione quatro navios no tabuleiro.
+ 
+Dois navios devem estar posicionados horizontalmente ou verticalmente (como no nível anterior).
+ 
+Os outros dois navios devem ser posicionados na diagonal. Considere que um navio diagonal ocupa posições onde a linha e a coluna aumentam
+ou diminuem simultaneamente (ex: tabuleiro[i][i] ou tabuleiro[i][9-i] para um tabuleiro 10x10).
+ 
+Represente as posições ocupadas pelos navios com o valor 3.
+ 
+Escolha as coordenadas iniciais.
+ 
+Valide que as posições dos navios estejam dentro dos limites do tabuleiro e que eles não se sobreponham.
+ 
+Exibir o Tabuleiro: Utilize loops aninhados e o comando printf para exibir o tabuleiro completo no console. A saída deve mostrar a matriz 10x10, com 0s representando água e 3s representando as partes dos navios. Utilize espaços para alinhar a saída e facilitar a visualização do tabuleiro.
+"FIZ EXATAMENTE OQUE O PROFESSOR PEDIU NA EXPLICAÇÃO"
 
 */
+
 int main(){
 
   int j = 0, tabuleiro[10][10] = {
-            {0,0,0,0,0,0,0,0,0,1},
-            {0,0,0,0,0,0,0,0,0,2},
-            {0,0,0,0,0,0,0,0,0,3},
-            {0,0,0,3,3,3,0,0,0,4},
-            {0,0,0,0,0,0,0,0,0,5},
-            {0,0,0,0,0,0,0,3,0,6},
-            {0,0,0,0,0,0,0,3,0,7},
-            {0,0,0,0,0,0,0,3,0,8},
-            {0,0,0,0,0,0,0,0,0,9},
-            {0,0,0,0,0,0,0,0,0,10}
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,3,0,0},
+            {0,0,0,0,0,0,3,0,0,0},
+            {0,3,3,3,0,3,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,3,0,0,0,0,3,0,0},
+            {0,0,0,3,0,0,0,3,0,0},
+            {0,0,0,0,3,0,0,3,0,0},
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0}
             };
 
   char coluna[10] = {'A','B','C','D','E','F','G','H','I','J'};
-  int i = 1;
-
+  
+  //AQUI ESTA O FOR PARA AS LETRAS
   printf("  ");
   while (j < 10)
   {
@@ -42,10 +54,15 @@ int main(){
       j++;
   }
 
-  for(int i = 1; i < 11; i++)
-  {
 
-  printf("\n % d %d %d %d %d %d %d %d %d %d %d", i, tabuleiro[0][0], tabuleiro[0][1], tabuleiro[0][2], tabuleiro[0][3], tabuleiro[0][4], tabuleiro[0][5], tabuleiro[0][6], tabuleiro[0][7], tabuleiro[0][8], tabuleiro[0][9]);  
+  //AQUI ESTA O TABULEIRO
+  for(int i = 1; i < 10; i++)
+  {  
+    while (i == 1)
+    {
+      printf("\n % d %d %d %d %d %d %d %d %d %d %d", i, tabuleiro[0][0], tabuleiro[0][1], tabuleiro[0][2], tabuleiro[0][3], tabuleiro[0][4], tabuleiro[0][5], tabuleiro[0][6], tabuleiro[0][7], tabuleiro[0][8], tabuleiro[0][9]);
+      i++;
+    }  
 
     while (i == 2)
     {
@@ -115,7 +132,7 @@ int main(){
     {
 
     printf("\n %d %d %d %d %d %d %d %d %d %d %d", i, tabuleiro[9][0], tabuleiro[9][1], tabuleiro[9][2], tabuleiro[9][3], tabuleiro[9][4], tabuleiro[9][5], tabuleiro[9][6], tabuleiro[9][7], tabuleiro[9][8], tabuleiro[9][9]);
-    break;
+    break;;
 
     }
   }
