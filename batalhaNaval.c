@@ -2,29 +2,9 @@
 
 /*
 
-Nome: Ademir de Assis Honorato Gonçalves Junior  Curso: Engenharia de Software  Atividade: Desafio Batalha Naval Nivel Intermediario
+Nome: Ademir de Assis Honorato Gonçalves Junior  Curso: Engenharia de Software  Atividade: Desafio Batalha Naval Nivel Avançado
 
-O que você vai fazer
 
-Você deve modificar o seu programa em C para:
-
-Criar um Tabuleiro 10x10: Declare uma matriz (array bidimensional) de tamanho 10x10 para representar o tabuleiro do Batalha Naval.
-Inicialize todas as posições com o valor 0, representando água.
- 
-Posicionar Quatro Navios: Posicione quatro navios no tabuleiro.
- 
-Dois navios devem estar posicionados horizontalmente ou verticalmente (como no nível anterior).
- 
-Os outros dois navios devem ser posicionados na diagonal. Considere que um navio diagonal ocupa posições onde a linha e a coluna aumentam
-ou diminuem simultaneamente (ex: tabuleiro[i][i] ou tabuleiro[i][9-i] para um tabuleiro 10x10).
- 
-Represente as posições ocupadas pelos navios com o valor 3.
- 
-Escolha as coordenadas iniciais.
- 
-Valide que as posições dos navios estejam dentro dos limites do tabuleiro e que eles não se sobreponham.
- 
-Exibir o Tabuleiro: Utilize loops aninhados e o comando printf para exibir o tabuleiro completo no console. A saída deve mostrar a matriz 10x10, com 0s representando água e 3s representando as partes dos navios. Utilize espaços para alinhar a saída e facilitar a visualização do tabuleiro.
 "FIZ EXATAMENTE OQUE O PROFESSOR PEDIU NA EXPLICAÇÃO"
 
 */
@@ -32,16 +12,16 @@ Exibir o Tabuleiro: Utilize loops aninhados e o comando printf para exibir o tab
 int main(){
 
   int j = 0, tabuleiro[10][10] = {
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,3,0,0},
-            {0,0,0,0,0,0,3,0,0,0},
-            {0,3,3,3,0,3,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,3,0,0,0,0,3,0,0},
-            {0,0,0,3,0,0,0,3,0,0},
-            {0,0,0,0,3,0,0,3,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0}
+            {0,0,1,0,0,0,0,2,0,0},
+            {0,1,1,1,0,0,2,2,2,0},
+            {1,1,1,1,1,0,0,2,0,0},
+            {0,0,4,0,0,0,0,0,0,0},
+            {0,0,4,0,0,0,0,0,0,0},
+            {4,4,4,4,4,0,0,0,3,0},
+            {0,0,4,0,0,0,0,0,3,0},
+            {0,0,4,0,0,0,3,0,3,0},
+            {0,0,0,0,0,3,0,0,0,0},
+            {0,0,0,0,3,0,0,0,0,0}
             };
 
   char coluna[10] = {'A','B','C','D','E','F','G','H','I','J'};
