@@ -9,6 +9,12 @@ Nome: Ademir de Assis Honorato Gonçalves Junior  Curso: Engenharia de Software 
 
 */
 
+
+/*
+
+Para melhor entendimento dos efeitos coloquei o valor 1,2,4 para representar o efeitos e 3 para navios
+
+*/
 int main(){
 
   int j = 0, tabuleiro[10][10] = {
